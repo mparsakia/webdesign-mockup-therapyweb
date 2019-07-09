@@ -209,7 +209,7 @@ hr {
 /* specific css rules */
 .herocontainer {
     margin: 5px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/photos/hero.jpg'); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../photos/hero.jpg'); 
     background-size: auto 100%;
     background-position: center; 
     background-repeat: no-repeat;
@@ -232,8 +232,51 @@ hr {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        line-height: 18px;
         width: 80%; /* width & height of the shadowbox */
+        font-size: 30px;
+}
+
+/* All the media queries to resize the font so it doesn't overflow the main content! */
+@media screen and (max-width: 900px) {
+    .herotxt {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .herotxt {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .herotxt {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .herotxt {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .herotxt {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .herotxt {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .herotxt {
+        font-size: 8px;
+    }
 }
 
 

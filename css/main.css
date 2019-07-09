@@ -1,18 +1,18 @@
 /* global defaults if not overridden css rules */
 
 html {
-    background: rgb(98,170,171);
-	background: -moz-linear-gradient(0deg, rgba(98,170,171,1) 0%, rgba(245,198,134,1) 35%);
-	background: -webkit-linear-gradient(0deg, rgba(98,170,171,1) 0%, rgba(245,198,134,1) 35%);
-	background: linear-gradient(0deg, rgba(98,170,171,1) 0%, rgba(245,198,134,1) 35%);
+    background: #62aaab;
+	background: -moz-linear-gradient(0deg, rgba(98,170,171,1) 0%, rgba(245,198,134,1) 45%);
+	background: -webkit-linear-gradient(0deg, rgba(98,170,171,1) 0%, rgba(245,198,134,1) 45%);
+	background: linear-gradient(0deg, rgba(98,170,171,1) 0%, rgba(245,198,134,1) 45%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#62aaab",endColorstr="#f5c686",GradientType=1);
 }
 
 body {
-    background: #cccccc;
+    background: #9ab4c9;
     margin: 0 auto;
-    padding: 5px;
-    max-width: 80vw;
+    padding: 5px;    
+    max-width: 75vw;
     font-size: 16px;
     letter-spacing: normal;
     font-family: 'Open Sans', sans-serif;
@@ -87,7 +87,6 @@ hr {
     text-align: center;
     color: #f5f5f5;
     background-color: #323232;
-    display: flex;
 }
 
 .wideheader h1 {
@@ -103,7 +102,7 @@ hr {
     flex-grow: 1;
 }
 
-/* container for text inside widemain, because photo gallery uses .widemain */
+/* container for text inside widemain */
 .wmaintxt {
     padding: 15px 25px 20px 25px;
 }
@@ -206,3 +205,122 @@ hr {
         text-align: left;
   }
 }
+
+
+/* specific css rules */
+.herocontainer{
+    margin: 5px;
+    background-image: url('/photos/hero.jpg'); 
+    background-size: auto 100%; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;           /* Make the width of box same as image */
+    
+}
+
+.heroinner {
+    max-width: 960px; 
+    margin: 0 auto;
+    
+}
+
+.herotxt {
+        position: absolute;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 4px 4px rgba(0,0,0,0.4); /* blur box soft edges match bg color */
+        border-radius: 4px;
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 18px;
+        width: 80%; /* width & height of the shadowbox */
+        height: 80%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  ----- PROGRAMMING NOTES -----
+
+
+-----------------------------------------------------------------------------------------------
+https://www.tutorialrepublic.com/codelab.php?topic=faq&file=placing-text-over-an-image-with-css
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Example of Text Block Over Image</title>
+<style type="text/css">
+    .box{
+        position: relative;
+        display: inline-block; 
+    }
+    .box .text{
+        position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;        
+        text-align: center;
+        top: 40%; 
+        background: rgba(0, 0, 0, 0.8);
+        font-family: Arial,sans-serif;
+        color: #fff;
+        width: 60%;
+    }
+</style>
+</head> 
+<body>
+    <div class="box">
+    	<img src="/examples/images/kites.jpg" alt="Flying Kites">
+        <div class="text">
+            <h1>Flying Kites</h1>
+        </div>
+    </div>
+</body>
+</html>           
+
+------------------------------------------------------------------------------------------------
+
+http://www.delwinvriend.com/en/resizable-full-width-hero-images
+
+<div style="width: 100%; background-image: url('hero_1920x468px.jpg'); background-size: auto 100%; background-position: center top; background-repeat: no-repeat;">
+    <div style="max-width: 960px; margin: 0 auto;">
+        <img src="clear_960x468.gif" style="width: 100%;" alt="My Hero" />
+    </div>
+</div>
+
+------------------------------------------------------------------------------------------------
+
+https://www.w3schools.com/howto/howto_css_image_text.asp (also have TL TR BL BR)
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+<div class="container">
+  <img src="img_snow_wide.jpg" alt="Snow" style="width:100%;">
+  <div class="bottom-left">Bottom Left</div>
+  <div class="top-left">Top Left</div>
+  <div class="top-right">Top Right</div>
+  <div class="bottom-right">Bottom Right</div>
+  <div class="centered">Centered</div>
+</div>
+
+
+*/

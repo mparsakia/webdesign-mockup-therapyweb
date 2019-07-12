@@ -79,18 +79,18 @@ hr {
 
 /* HeroContainer and ClearFix + Text Resizes media queries */
 .herocontainer {
+    position: relative;
     margin: 52px 5px 5px 5px;  /*  52 offset for sticky navbar gilding ... & equal margins */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../photos/hero.jpg'); 
     background-size: auto 100%;
     background-position: center; 
     background-repeat: no-repeat;
-    position: relative;
 }
 
 @media screen and (max-width: 700px) {
-    .herocontainer {
-    margin: 10px 5px 5px 5px;  /*  mobile offset */
-}
+        .herocontainer {
+        margin: 10px 5px 5px 5px;  /*  mobile offset */
+    }
 }
 
 
@@ -229,6 +229,7 @@ hr {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
+    
 }
 
 .topnav a:hover {
@@ -244,6 +245,7 @@ hr {
 .active {
     background-color: #f5c686; 
     color: black;
+    box-shadow: 0 0 8px 8px rgba(0,0,0,0.4); /* active tab shadow for active link */
 }
 
 .topnav .icon {

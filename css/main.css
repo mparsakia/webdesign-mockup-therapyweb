@@ -1,12 +1,11 @@
 /* global defaults if not overridden css rules */
 
 html {
-    background: #62aaab;
-
+    background: #2b4a4a;
 }
 
 body {
-    background-image: linear-gradient(#f5c686 400px, #62aaab 40%);
+    background-image: linear-gradient(#f5c686 350px, #62aaab 40%);
     margin: 0 auto;
     padding: 5px;    
     max-width: 1200px;
@@ -80,7 +79,7 @@ hr {
 
 /* HeroContainer and ClearFix + Text Resizes media queries */
 .herocontainer {
-    margin: 10px 5px 5px 5px;  /* offset to equilibrium margins */
+    margin: 52px 5px 5px 5px;  /*  52 offset for sticky navbar gilding ... & equal margins */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../photos/hero.jpg'); 
     background-size: auto 100%;
     background-position: center; 
@@ -106,7 +105,7 @@ hr {
         font-size: 30px;
 }
 
-/* All the media queries to resize the font so it doesn't overflow the main content! */
+/* Scaling font for shadowbox resizing */
 @media screen and (max-width: 900px) {
     .herotxt {
         font-size: 20px;
@@ -189,8 +188,8 @@ hr {
     color: #000000;
 }
 
-/* mobile overrides */
-@media screen and (max-width: 650px) {
+/* mobile overrides wmaintxt */
+@media screen and (max-width: 700px) {
     .wmaintxt {
         padding: 0px;
         margin: 5px;
@@ -205,10 +204,13 @@ hr {
 
 
 /* Responsive "Navbar" Classes, only works if the JS code is in page */
+
 .topnav {
-  overflow: hidden;
-  background-color: #62aaab;
-  margin: -5px 0px 0px 0px;
+    position: fixed;
+    overflow: hidden;
+    z-index: 9999;
+    background-color: #62aaab;
+    margin: -5px 0px 0px 0px; 
 }
 
 .topnav a {
@@ -242,6 +244,10 @@ hr {
 
 /* navbar changes when on mobile or resize */
 @media screen and (max-width: 700px) {
+    
+    .topnav{
+        position: static;
+    }
     
     .topnav a:not(:first-child) {
         display: none;

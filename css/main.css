@@ -7,7 +7,7 @@ html {
 body {
     background-image: linear-gradient(#f5c686 350px, #62aaab 40%);
     margin: 0 auto;
-    padding: 5px;    
+    padding: 0px 5px 0px 5px; 
     max-width: 1200px;
     font-size: 16px;
     letter-spacing: normal;
@@ -45,7 +45,7 @@ hr {
 /* copyright / footer area, griddify the inside to add links */
 .copyrt {
     background-color: #2b4a4a;
-    margin: 0px 5px -5px 5px;
+    margin: 0px 5px 0px 5px;
     padding: 5px;
 
 }
@@ -80,19 +80,12 @@ hr {
 /* HeroContainer and ClearFix + Text Resizes media queries */
 .herocontainer {
     position: relative;
-    margin: 52px 5px 5px 5px;  /*  52 offset for sticky navbar gilding ... & equal margins */
+    margin: 10px 5px 5px 5px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../photos/hero.jpg'); 
     background-size: auto 100%;
     background-position: center; 
     background-repeat: no-repeat;
 }
-
-@media screen and (max-width: 700px) {
-        .herocontainer {
-        margin: 10px 5px 5px 5px;  /*  mobile offset */
-    }
-}
-
 
 
 .clearimg {
@@ -214,18 +207,15 @@ hr {
 /* Responsive "Navbar" Classes, only works if the JS code is in page */
 
 .topnav {
-    position: fixed;
     overflow: hidden;
-    z-index: 9999;
     background-color: #62aaab;
-    margin: -5px 0px 0px 0px; 
 }
 
 .topnav a {
-    float: left;
     display: block;
-    color: #ffffff;
+    float:left;
     padding: 10px 15px;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
@@ -243,9 +233,8 @@ hr {
 }
 
 .active {
-    background-color: #f5c686; 
+    background-color: #fa9000; /*actrive color can match to bg */
     color: black;
-    box-shadow: 0 0 8px 8px rgba(0,0,0,0.4); /* active tab shadow for active link */
 }
 
 .topnav .icon {
@@ -254,10 +243,6 @@ hr {
 
 /* navbar changes when on mobile or resize */
 @media screen and (max-width: 700px) {
-    
-    .topnav{
-        position: static;
-    }
     
     .topnav a:not(:first-child) {
         display: none;
@@ -293,6 +278,14 @@ hr {
         color: white;
   }
 }
+
+
+
+
+
+
+
+
 
 
 

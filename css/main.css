@@ -1,25 +1,19 @@
 /* global defaults if not overridden css rules */
 
 html {
-    background: #2b4a4a;
+    background: #2c2c2c;
 }
 
 body {
-    background-image: linear-gradient(#f5c686 350px, #62aaab 40%);
+    background: #7d7d7d;
     margin: 0 auto;
     padding: 0px 5px 0px 5px; 
-    max-width: 1200px;
-    font-size: 16px;
+    max-width: 1200px; /* was 1200 before changing, this scales the hero img too! 1300*/
     letter-spacing: normal;
     font-family: 'Open Sans', sans-serif;
-    height: 100%;
-
 }
 
-/* Styling Horizontal Rule */
-hr {
-    border: 1px #62aaab solid;
-}
+
 
 /* ID for hiding specific elements */
 #hide {
@@ -42,27 +36,14 @@ hr {
     }
 }
 
-/* copyright / footer area, griddify the inside to add links */
-.copyrt {
-    background-color: #2b4a4a;
-    margin: 0px 5px 0px 5px;
-    padding: 5px;
 
-}
 
-.copyrt p {
-    margin: 0px;
-    font-size: 14px;
-    text-align: center;
-    font-family: monospace;
-    color: #ffffff;
-}
 
 /*  "Wide" page - CSS Grid Wrapper Classes */
 .widewrapper {    
     display: flex;
     flex-direction: column; /* flex and direction or it fucks up */
-    min-height: calc(100vh - 10px); /* stretch body to bottom before footer */
+    min-height: 100vh; /* stretch body to bottom before footer */
 }
 
 .widewrapper a, a:hover{
@@ -71,10 +52,6 @@ hr {
 
 .widewrapper b {
     font-weight: bold;
-}
-
-.navwrap {
-    margin: 0px -5px;
 }
 
 /* HeroContainer and ClearFix + Text Resizes media queries */
@@ -87,23 +64,32 @@ hr {
     background-repeat: no-repeat;
 }
 
-
 .clearimg {
     width: 100%;
 }
 
 .herotxt {
-        position: absolute;
-        text-align: center;
-        background: rgba(0, 0, 0, 0.4);
-        box-shadow: 0 0 8px 8px rgba(0,0,0,0.4); /* blur box soft edges match bg color */
-        border-radius: 4px;
-        color: #fff;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%; /* width & height of the shadowbox */
-        font-size: 30px;
+    position: absolute;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 12px 8px rgba(0,0,0,0.4); /* blur box soft edges match bg color */
+    border-radius: 4px;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* width & height of the shadowbox */
+    font-size: 30px;
+    line-height: 10px;
+}
+
+/* hr style for the rules inside the shadowbox */
+.herotxt hr {
+    border:none;
+    height: 1px;
+    color: #ffffff;
+    background-color: #ffffff;
+    width: 75%;   
 }
 
 /* Scaling font for shadowbox resizing */
@@ -140,17 +126,18 @@ hr {
 @media screen and (max-width: 400px) {
     .herotxt {
         font-size: 10px;
+        line-height: 4px;
     }
 }
 
 @media screen and (max-width: 300px) {
     .herotxt {
         font-size: 8px;
+        line-height: 2px;
     }
 }
 
-/* header for pages that are not the homepage with hero image */
-
+/* header for pages that are NOT the homepage with hero image */
 .wideheader {
     padding: 10px;
     margin: 5px;
@@ -161,33 +148,64 @@ hr {
 
 .wideheader h1 {
     color: #f5f5f5;
-    font-size: 26px;
-    margin: auto;
+    font-size: 32px; 
+    margin: 0 auto;
 }
 
 .widemain {
-    padding: 10px;
+    font-size: 18px;
+    padding: 5px;
     margin: 5px;
     background-color: #f5f5f5;
-    flex-grow: 1;
+    flex: 1; /* stretches the container to the footer */
+}
+
+/* Styling Main Horizontal Rule */
+.widemain hr {
+    border: none;
+    height: 2px;
+    color: #7265b5;
+    background-color: #7265b5;
+    width: 100%;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+
+.mainlabel h1, h2 {
+    padding: 6px 0px 8px 0px;
+    color: #ffffff;
+    background: #38325a;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 /* container for text inside widemain */
 .wmaintxt {
-    padding: 15px 25px 20px 25px;
+    padding: 10px;
 }
 
-.wmaintxt p {
-    margin: 0 auto;
-    line-height: 150%;
-    color: #000000;
+.wmaintxt h1 {
+    font-size: 32px;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 .wmaintxt h2 {
-    margin: 0 auto;
-    font-size: 22px;
-    color: #000000;
+    font-size: 28px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
+
+.wmaintxt p {
+    line-height: 130%;
+    color: #000000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 
 /* mobile overrides wmaintxt */
 @media screen and (max-width: 700px) {
@@ -195,45 +213,55 @@ hr {
         padding: 0px;
         margin: 5px;
     }
-    
-    .wmaintxt p {
-        margin: 0 auto;
-        line-height: 130%;
-        color: #000000;
-    }
 }
 
 
-/* Responsive "Navbar" Classes, only works if the JS code is in page */
+/* Navbar CSS and JS Styling */
+.navwrap {
+    display: inline-block;
+    margin: 0px -5px;
+    overflow: hidden;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    -moz-box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5); /* dropshadow trim & cross-browser css */
+    -webkit-box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
+    z-index: 999;   /* z-index high value to always show this top, (fix for hero img overlap) */
+    
+}
+
+.navlogo {
+    float:right;
+}
 
 .topnav {
     overflow: hidden;
-    background-color: #62aaab;
+    background-color: #7265b5;
 }
 
 .topnav a {
-    display: block;
-    float:left;
-    padding: 10px 15px;
-    color: #ffffff;
-    text-decoration: none;
+    float: left;
+    padding: 0px 15px;
+    font-size: 20px;   
     font-weight: bold;
-    font-size: 20px;
-    
+    color: #ffffff;
+    line-height: 75px;
+
 }
 
 .topnav a:hover {
-    background-color: #f5c686; 
-    color: black; 
+    background-color: #f5c686;
+    color: black;
 }
 
 /* override the text to black on first button */
 #topact {
-    color:black; 
+    color:#000000; 
 }
 
 .active {
-    background-color: #fa9000; /*actrive color can match to bg */
+    background-color: rgba(255, 255, 255, 0.5);
     color: black;
 }
 
@@ -241,8 +269,35 @@ hr {
     display: none;
 }
 
+    
+/*
+navbar breakpoints for scaling below, fix later.
+some of the text will wrap and the navbar will take up 2x the space
+also the logo needs to scale down or be hidden completely
+this navbar size is smaller than full-size but not the sandwich-iphone menu one
+
+@media screen and (max-width: 1000px) {
+    .navlogo {
+        display: none;
+    }
+    .topnav a {
+        font-size: 18px;
+        padding: 0px 10px;
+    }
+}
+    
+*/
+
 /* navbar changes when on mobile or resize */
 @media screen and (max-width: 700px) {
+
+    .navlogo {
+        display:none;
+    }
+    
+    .topnav a{
+        line-height: 65px;
+    }
     
     .topnav a:not(:first-child) {
         display: none;
@@ -251,14 +306,15 @@ hr {
     .topnav a.icon {
         float: right;
         display: block;
-        background-color: #2b4a4a;   
+        background-color: rgba(0,0,0,0.5);   
         color: white;
+        padding: 0 30px;
 
   }
     
     .topnav a:hover {
         background-color: #f5c686;  
-        color: white;
+        color: #000000;
   }
 
     .topnav.responsive {
@@ -280,18 +336,95 @@ hr {
 }
 
 
+/* copyright / footer area, griddify the inside to add links */
+.copyrt {
+    background-color: #38325a;
+    margin: 0px 5px 0px 5px;
+    padding: 5px;
+}
+
+.copyrt p {
+    margin: 0px;
+    font-size: 14px;
+    text-align: center;
+    font-family: monospace;
+    color: #ffffff;
+}
 
 
 
 
+/* Specific CSS Rules Begin */
 
+.label {
+    display: block;
+    background: rgba(0,0,0,0.5);
+    color: #ffffff;
+    font-size: 30px;
+    padding: 5px;
+}
 
+/* 2 x 2 Grid on Homepage for Content */
+.maingrid {
+    display: grid;
+    word-wrap: break-word;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:"one two"
+                        "three four";
+}
 
+.one{
+    grid-area: one;
+    background-color: #c16464;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0px 0px 10px 10px;
+    color: #000000;
+}
 
+.two{
+    grid-area: two;
+    background-color: #54a37f;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0px 0px 10px 10px;
+    color: #000000;
+}
+
+.three{
+    grid-area: three;
+    background-color: #627cad;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0px 0px 10px 10px;
+    color: #000000;
+}
+
+.four{
+    grid-area: four;
+    background-color: #ffc87c;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0px 0px 10px 10px;
+    color: #000000;
+}
+
+/* Reorder the Grid to Vertical on Mobile */
+@media screen and (max-width: 800px) {
+    .maingrid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;    
+    grid-template-areas:"one" 
+                        "two"
+                        "three"
+                        "four";
+    }
+}
 
 /*  ----- PROGRAMMING NOTES -----
-
-
 -----------------------------------------------------------------------------------------------
 https://www.tutorialrepublic.com/codelab.php?topic=faq&file=placing-text-over-an-image-with-css
 

@@ -1,25 +1,16 @@
-/* global defaults if not overridden css rules */
+/* TherapyWeb CSS - Michael Parsakia */
 
-html {
-    background: #f5f5f5;
+html, a {
+    letter-spacing: normal;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
 }
 
 body {
-    background: #bebebe;
     margin: 0 auto;
-    padding: 0px 5px 0px 5px; 
-    max-width: 1300px; /* was 1200 before changing, this scales the hero img too! 1300*/
-    letter-spacing: normal;
-    font-family: 'Open Sans', sans-serif;
+    background-color: #808080;
 }
 
-
-
-/* ID for hiding specific elements */
-#hide {
-    display: none;
-}
-    
 /* changes highlight color, WebKit/Blink Browsers, Gecko Browsers */
 ::selection {
   background: #f5c686; 
@@ -36,14 +27,15 @@ body {
     }
 }
 
-
-
-
-/*  "Wide" page - CSS Grid Wrapper Classes */
+/*  WideWrapper CSS - Wraps "Main" */
 .widewrapper {    
     display: flex;
-    flex-direction: column; /* flex and direction or it fucks up */
-    min-height: 100vh; /* stretch body to bottom before footer */
+    flex-direction: column;     /* flex and direction or it fucks up */
+    min-height: 100vh;          /* stretch body to bottom before footer */
+    max-width: 1300px;          /* scales hero image, also offsets navbar! keep in mind if you change this value to update others! */
+    background-color: #c7c7c7;
+    margin: 0 auto;
+    padding: 0px 5px 0px 5px;   /* extra "trim" on the sides wrapping main*/
 }
 
 .widewrapper a, a:hover{
@@ -54,7 +46,7 @@ body {
     font-weight: bold;
 }
 
-/* HeroContainer and ClearFix + Text Resizes media queries */
+/* HeroContainer and ClearGifScale + Text Resizes media queries */
 .herocontainer {
     position: relative;
     margin: 10px 5px 5px 5px;
@@ -68,6 +60,7 @@ body {
     width: 100%;
 }
 
+
 .herotxt {
     position: absolute;
     text-align: center;
@@ -78,7 +71,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%; /* width & height of the shadowbox */
+    width: 80%;       /* width & height of the shadowbox */
     font-size: 30px;
     line-height: 10px;
 }
@@ -126,18 +119,16 @@ body {
 @media screen and (max-width: 400px) {
     .herotxt {
         font-size: 10px;
-        line-height: 4px;
     }
 }
 
 @media screen and (max-width: 300px) {
     .herotxt {
         font-size: 8px;
-        line-height: 2px;
     }
 }
 
-/* header for pages that are NOT the homepage with hero image */
+/* header for pages that are NOT the homepage with hero image - FIX THIS UP!! */
 .wideheader {
     padding: 10px;
     margin: 5px;
@@ -152,15 +143,17 @@ body {
     margin: 0 auto;
 }
 
+
+/* widemain CSS - inner container of widerwapper & used on one-off pages and homepage */
 .widemain {
     font-size: 18px;
     padding: 0px;
-    margin: 5px;
+    margin: 5px 5px 10px 5px;       /* for some reason bottom needs double PX before footer (TRBL) */
     background-color: #f5f5f5;
-    flex: 1; /* stretches the container to the footer */
+    flex: 1;                        /* stretches the container to the footer */
 }
 
-/* Styling Main Horizontal Rule */
+/* we don't have any hr's yet but if we do we will use this, sofar we use .mainlabel below */
 .widemain hr {
     border: none;
     height: 2px;
@@ -171,8 +164,8 @@ body {
     margin-bottom:5px;
 }
 
-
-.mainlabel h1, h2 {
+/* SPANNED h1 and h2 tags, used in the "span" tags for the "headings" (purple lines) */
+.mainlabel h1 {
     padding: 6px 0px 8px 0px;
     color: #ffffff;
     background: #38325a;
@@ -180,40 +173,52 @@ body {
     text-align: center;
     width: 100%;
     margin: 0 auto;
-}
-
-/* container for text inside widemain */
-.wmaintxt {
-    padding: 10px;
-}
-
-.wmaintxt h1 {
     font-size: 32px;
 }
 
-.wmaintxt h2 {
-    font-size: 28px;
+.mainlabel h2 {
+    padding: 6px 0px 8px 0px;
+    color: #ffffff;
+    background: #38325a;
+    border-radius: 0px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 26px;
 }
 
+/* If you need regular h-tags (unspanned) code them in here (most likely inside wmaintxt) */
+
+/* --- Most content is inside wmaintxt --- */
+.wmaintxt {
+    
+}
+
+/* PurpleBanner Spanned edge to edge, but this currently affects <p> tags in the grids! */
 .wmaintxt p {
+    padding: 15px;  
     line-height: 130%;
     color: #000000;
 }
 
-
 /* mobile overrides wmaintxt */
 @media screen and (max-width: 700px) {
     .wmaintxt {
-        padding: 0px;
-        margin: 5px;
+
+    }
+    
+    .wmaintxt p {
+    padding: 10px;  
+    line-height: 130%;
+    color: #000000;
     }
 }
 
 
 /* Navbar CSS and JS Styling */
 .navwrap {
-    display: inline-block;
-    margin: 0px -5px;
+    display: block;
+    background-color: #7265b5;
     overflow: hidden;
     position: sticky;
     position: -webkit-sticky;
@@ -221,28 +226,32 @@ body {
     -moz-box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5); /* dropshadow trim & cross-browser css */
     -webkit-box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
     box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
-    z-index: 999;   /* z-index high value to always show this top, (fix for hero img overlap) */
-    
-}
-
-.navlogo {
-    float:right;
+    z-index: 999;       /* z-index high value to always show this top, (fix for hero img overlap) */
 }
 
 .topnav {
+    max-width: 1310px;      /* This value = widewrapper max + it's padding left and right */
+    margin: 0 auto;
     overflow: hidden;
     background-color: #7265b5;
 }
 
+/* Links <a>'s must be floated left, navlogo must be floated right for this long-purple to work & center things above content*/
 .topnav a {
     float: left;
-    padding: 0px 15px;
+    padding: 0px 10px;      /* 10 so it lines up w/ widewrap pad L R */
     font-size: 20px;   
     font-weight: bold;
     color: #ffffff;
-    line-height: 75px;
+    line-height: 75px;      /* line-height of the logo's tall value */
 
 }
+
+.navlogo {
+    float:right;
+    max-height: 75px;       /* most likely not neccesary if logo is 150x75 */
+}
+
 
 .topnav a:hover {
     background-color: #f5c686;
@@ -286,10 +295,10 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 @media screen and (max-width: 700px) {
 
     .navlogo {
-        display:none;
+        display: none; /* hide the logo for now, maybe we can get this to show nicely somehow later */
     }
     
-    .topnav a{
+    .topnav a {
         line-height: 65px;
     }
     
@@ -302,8 +311,8 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
         display: block;
         background-color: rgba(0,0,0,0.5);   
         color: white;
-        padding: 0 30px;
-
+        padding: 0 28px;
+        font-size: 32px;
   }
     
     .topnav a:hover {
@@ -330,15 +339,18 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 }
 
 
-/* copyright / footer area, griddify the inside to add links */
+/* copyright / footer -- griddify the inside to add links & remember the <p> overrides! */
 .copyrt {
-    background-color: #38325a;
-    margin: 0px 5px 0px 5px;
+    background-color: #1c192d;
     padding: 5px;
+    
+    /* SHADOW TRIM FOR FOOTER -- PLAY WITH THIS TO SEE IF OUT OR INSET WORKS BEST */
+    -moz-box-shadow: 0px 10px 5px rgba(0,0,0,0.3) inset;
+    -webkit-box-shadow: 0px 10px 5px rgba(0,0,0,0.3) inset;
+    box-shadow: 0px 10px 5px rgba(0,0,0,0.3) inset;
 }
 
 .copyrt p {
-    margin: 0px;
     font-size: 14px;
     text-align: center;
     font-family: monospace;
@@ -369,7 +381,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
                         "three four";
 }
 
-.one{
+.one {
     grid-area: one;
     background-color: #c16464;
     text-align: center;
@@ -377,7 +389,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     color: #000000;    
 }
 
-.two{
+.two {
     grid-area: two;
     background-color: #54a37f;
     text-align: center;
@@ -385,7 +397,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     color: #000000;
 }
 
-.three{
+.three {
     grid-area: three;
     background-color: #627cad;
     text-align: center;
@@ -393,7 +405,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     color: #000000;
 }
 
-.four{
+.four {
     grid-area: four;
     background-color: #f2c282;
     text-align: center;

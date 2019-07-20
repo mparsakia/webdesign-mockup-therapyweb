@@ -1,6 +1,10 @@
 /* TherapyWeb CSS - Michael Parsakia */
 
-html, a {
+html {
+    background-color: #808080;
+}
+
+a {
     letter-spacing: normal;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
@@ -9,6 +13,7 @@ html, a {
 body {
     margin: 0 auto;
     background-color: #808080;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* changes highlight color, WebKit/Blink Browsers, Gecko Browsers */
@@ -88,45 +93,47 @@ body {
 /* Scaling font for shadowbox resizing */
 @media screen and (max-width: 900px) {
     .herotxt {
-        font-size: 20px;
+        font-size: 24px;
     }
 }
 
 @media screen and (max-width: 800px) {
     .herotxt {
-        font-size: 18px;
+        font-size: 22px;
     }
 }
 
 @media screen and (max-width: 700px) {
     .herotxt {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .herotxt {
-        font-size: 14px;
+        font-size: 18px;
     }
 }
 
 @media screen and (max-width: 500px) {
     .herotxt {
-        font-size: 12px;
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+        .herocontainer {
+        overflow: scroll; /* scroll overflow the text & shadowbox in case of an old phone visiting site... */
     }
 }
 
 @media screen and (max-width: 400px) {
     .herotxt {
-        font-size: 10px;
+        font-size: 14px;
     }
 }
 
-@media screen and (max-width: 300px) {
-    .herotxt {
-        font-size: 8px;
-    }
-}
 
 /* header for pages that are NOT the homepage with hero image - FIX THIS UP!! */
 .wideheader {
@@ -196,7 +203,7 @@ body {
 
 /* PurpleBanner Spanned edge to edge, but this currently affects <p> tags in the grids! */
 .wmaintxt p {
-    padding: 15px;  
+    padding: 10px;  
     line-height: 130%;
     color: #000000;
 }
@@ -249,7 +256,7 @@ body {
 
 .navlogo {
     float:right;
-    max-height: 75px;       /* most likely not neccesary if logo is 150x75 */
+    max-height: 75px;       /* most likely not neccesary if logo is == 150x75 */
 }
 
 
@@ -310,7 +317,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
         float: right;
         display: block;
         background-color: rgba(0,0,0,0.5);   
-        color: white;
+        color: #ffffff;
         padding: 0 28px;
         font-size: 32px;
   }
@@ -407,8 +414,11 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 /* 2 x 2 Grid on Homepage for Content */
 .maingrid {
     display: grid;
-    word-wrap: break-word;
+    
+    padding: 5px 0px;
     grid-gap: 5px;
+    
+    word-wrap: break-word;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:"one two"
@@ -463,8 +473,8 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 /* Meet the Team Grid */
 .teamgrid {
   display: grid;
+  grid-gap: 5px;
   word-wrap: break-word;
-  grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "picleft picright";
@@ -473,11 +483,14 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 .picleft { 
     grid-area: picleft;
     text-align: center;
+    background-color: #faebd7;
 }
 
 .picright { 
     grid-area: picright;   
     text-align: center;
+    background-color: #faebd7;
+
 }
 
 /* Vertical Team Grid Mobile */
@@ -493,6 +506,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 /* Meet the Team photos CSS */
 .pfpcont {
+   padding-top: 24px;
    text-align: center;
    margin: 0 auto;
    padding-bottom: 18px;
@@ -500,20 +514,20 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 .pfpcont img {
   border-radius: 50%;
-  max-width: 60%;
+  max-width: 35%;
   border: 8px solid #7265b5;
   box-shadow:0 0 0 8px hsl(0, 0%, 65%),  0 0 0 16px hsl(0, 0%, 85%);
 }
 
 .pfpspan {
-    padding: 10px 20px;
+    padding: 10px 15px;
     font-size: 24px;
     color: #ffffff;
-    background: #7265b5;
+    background-color: #7265b5;
     border-radius: 50px;
     display: block;
     margin: 0 auto;
-    width: 60%;
+    width: 55%;
     font-weight: bold;
 }
 

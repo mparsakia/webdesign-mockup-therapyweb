@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Standalone Page TherapyWeb</title>
+<link rel="stylesheet" href="css/main.css">
+<meta name="description" content="TherapyWeb">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet"> <!-- for googleFonts -->
+</head>
+<body>
+    
+<script>
+function navBarJs() {
+  var item = document.getElementById("navbar");
+  if (item.className === "topnav") {
+    item.className += " responsive";
+  } else {
+    item.className = "topnav";
+  }
+}
+</script>
+    
+        <nav class="navwrap">
+            <div class="topnav" id="navbar">
+            <a href="index.html">TherapyWeb Home</a>
+            <a href="standalone.html" class="active" id="topact" >Standalone Page</a>
+            <a href="#">Insurances</a>
+            <a href="#">FAQ / Resources</a>
+            <a href="#">Blog</a>
+            <a href="javascript:void(0);" class="icon" onclick="navBarJs()"><b>≡</b></a>
+            <img class="navlogo" src="photos/150x75test.png"/>
+            </div>
+        </nav>
+
+    
+    <div class="widewrapper">
+        <header class="wideheader">
+            <h1>Standalone WideHeader h1</h1>
+        </header>
+
+        <main class="widemain">
+            <div class="wmaintxt">
+                <span class="altlabel"><h2>h2 alt-label span</h2></span>
+                <p>Translated articles represent only a small portion of articles in most editions, in part because those editions do not allow fully automated translation of articles. Articles available in more than one language may offer "interwiki links", which link to the counterpart articles in other editions. A study published by PLoS ONE in 2012 also estimated the share of contributions to different editions of Wikipedia from different regions of the world. It reported that the proportion of the edits made from North America was 51% for the English Wikipedia, and 25% for the simple English Wikipedia.</p>            
+            </div>            
+        </main>
+    </div> 
+    
+    
+    <footer class="copyrt">
+    <br>
+    <p>TherapyWeb © Copyright 2019 | Web Design by Michael Parsakia</p>
+    <p>A line break above and below the footer content! This text is not inside any grids, only the .copyrt CSS area</p>
+        <div class="footgrid">
+          <div class="footleft"><p>p text inside footgrid number 1 <br> break before! p text inside footgrid number 1 p text inside footgrid number 1 <br> another break before ! p text inside footgrid <br> break! number 1 p text inside footgrid number 1</p></div>
+          <div class="footmid"><p>Link or Text 2<br>Link or Text 2<br>Link or Text 2<br>Link or Text 2<br>Link or Text 2<br>Link or Text 2<br>Link or Text 2<br>Link or Text 2<br></p></div>
+          <div class="footrt">
+              <p>We are located at: <br> 15302 Magnolia Blvd, Sherman Oaks CA 91502</p>
+              <div class="mapouter">
+                  <div class="gmap_canvas">
+                      <iframe width="100%" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=Sherman%20OaksGalleria%2C%20CA&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                  </div>
+                  <style>.mapouter{position:relative;text-align:right;height:250px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:250px;width:100%;border-radius:0px;}</style>
+              </div>
+        </div>
+        </div>
+
+    <br>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 /* TherapyWeb CSS - Michael Parsakia */
 
 html {
-    background-color: #808080;
+    background-color: #cdcdcd;
 }
 
 a {
@@ -12,7 +12,7 @@ a {
 
 body {
     margin: 0 auto;
-    background-color: #808080;
+    background-color: #cdcdcd;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -38,7 +38,7 @@ body {
     flex-direction: column;     /* flex and direction or it fxs up */
     min-height: 100vh;          /* stretch body to bottom before footer */
     max-width: 1300px;          /* scales hero image, also offsets navbar! keep in mind if you change this value to update others! */
-    background-color: #c7c7c7;
+    background-color: #998FCA;
     margin: 0 auto;
     padding: 0px 5px 0px 5px;   /* extra "trim" on the sides wrapping main*/
 }
@@ -380,10 +380,15 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     box-shadow: 0px 10px 5px rgba(0,0,0,0.3) inset;
 }
 
+/* copyright content wrapper, max width and centering of content */
+.copywrap {
+    max-width: 1310px;
+    margin: 0 auto;
+}
+
 .copyrt p {
     font-size: 14px;
     text-align: center;
-    font-family: monospace;
     color: #ffffff;
 }
 
@@ -399,17 +404,16 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 .footleft { 
     grid-area: footleft; 
-    border: 2px red solid;
+
 }
 
 .footmid {
     grid-area: footmid;
-    border: 2px blue solid;
+
 }
 
 .footrt { 
     grid-area: footrt; 
-    border:2px green solid;
 }
 
 
@@ -427,13 +431,13 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 
 
-/* Specific CSS Rules Begin */
+/* ----- Specific CSS Rules Begin ----- */
 
 .label {
     display: block;
     background: rgba(0,0,0,0.5);
     color: #ffffff;
-    font-size: 30px;
+    font-size: 26px;
     padding: 5px;
 }
 
@@ -455,7 +459,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     grid-area: one;
     background-color: #c16464;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     color: #000000;    
 }
 
@@ -463,7 +467,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     grid-area: two;
     background-color: #54a37f;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     color: #000000;
 }
 
@@ -471,7 +475,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     grid-area: three;
     background-color: #627cad;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     color: #000000;
 }
 
@@ -479,7 +483,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     grid-area: four;
     background-color: #f2c282;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     color: #000000;
 }
 
@@ -499,7 +503,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 /* Meet the Team Grid */
 .teamgrid {
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 0px;
   word-wrap: break-word;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
@@ -559,7 +563,80 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 
 
+/* css footer sitemap on left side of grid */
+.footmap {
+    width: 50%;
+    margin: 0 auto;
+}
 
+
+.footmap a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  text-decoration: underline;
+}
+
+.footmap a:hover {
+    background-color: #f5c686;
+    color: black;
+}
+
+/* spanned "labels" within the footer */
+.footspan {
+  display: block;
+  color: #7265b5;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0px 0px 0px;
+}
+
+.endcopyrt {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    background-color:#B9B2DB;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/* standalone page grid (2fr left txt & 1fr right for imgs) */
+.standgrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "standleft standright";
+}
+
+.standleft { 
+    grid-area: standleft;
+}
+
+.standright { 
+    grid-area: standright;
+    padding: 30px 15px 0px 15px;
+}
+
+.standright img {
+    max-width: 100%;
+    box-shadow: 0 0 10px 6px rgba(0,0,0,0.5);
+    margin: 5px 0px;
+}
+
+
+/* standalone grid mobile rearranged */
+@media screen and (max-width: 800px) {
+    .standgrid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;    
+    grid-template-areas:"standleft" 
+                        "standright";
+    }
+}
 
 
 

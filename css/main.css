@@ -154,7 +154,6 @@ body {
 /* widemain CSS - inner container of widerwapper & used on one-off pages and homepage */
 .widemain {
     font-size: 18px;
-    padding: 0px;
     margin: 5px 5px 10px 5px;       /* for some reason bottom needs double PX before footer (TRBL) */
     background-color: #f5f5f5;
     flex: 1;                        /* stretches the container to the footer */
@@ -166,7 +165,6 @@ body {
     height: 2px;
     color: #7265b5;
     background-color: #7265b5;
-    width: 100%;
     margin-top:5px;
     margin-bottom:5px;
 }
@@ -178,7 +176,6 @@ body {
     background: #38325a;
     border-radius: 0px;
     text-align: center;
-    width: 100%;
     margin: 0 auto;
     font-size: 32px;
 }
@@ -189,7 +186,6 @@ body {
     background: #38325a;
     border-radius: 0px;
     text-align: center;
-    width: 100%;
     margin: 0 auto;
     font-size: 26px;
 }
@@ -201,7 +197,6 @@ body {
     background: #38325a;
     border-radius: 0px;
     text-align: center;
-    width: 100%;
     margin: 0 auto;
     font-size: 32px;
 }
@@ -212,7 +207,6 @@ body {
     background: #fad8aa;
     border-radius: 0px;
     text-align: center;
-    width: 100%;
     margin: 0 auto;
     font-size: 26px;
 }
@@ -277,7 +271,6 @@ body {
     font-weight: bold;
     color: #ffffff;
     line-height: 75px;      /* line-height of the logo's tall value */
-
 }
 
 .navlogo {
@@ -323,6 +316,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 }
     
 */
+
 
 /* navbar changes when on mobile or resize */
 @media screen and (max-width: 700px) {
@@ -374,7 +368,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 /* copyright area footer & remember the <p> overrides, .copyrt wraps the grid's rules !! */
 .copyrt {
     background-color: #1c192d;
-    padding: 5px;
+    padding: 5px 0px 5px 0px;
     -moz-box-shadow: 0px 10px 5px rgba(0,0,0,0.3) inset;
     -webkit-box-shadow: 0px 10px 5px rgba(0,0,0,0.3) inset;
     box-shadow: 0px 10px 5px rgba(0,0,0,0.3) inset;
@@ -598,6 +592,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     margin: 0 auto;
     width: 100%;
     background-color:#B9B2DB;
+    color: #000000;
     text-align: center;
     font-size: 14px;
 }
@@ -637,6 +632,9 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
                         "standright";
     }
 }
+
+
+
 
 
 

@@ -1,19 +1,34 @@
 /* TherapyWeb CSS - Michael Parsakia */
 
+/* uncomment below for debug mode */
+/*
+    * {
+      background: #000 !important;
+      color: #0f0 !important;
+      outline: solid #f00 1px !important;
+    }
+*/
+
 html {
     background-color: #cdcdcd;
+}
+
+body {
+    background-color: #cdcdcd;
+    font-family: 'Open Sans', sans-serif;
+    
+/* width, height, margin, padding, overflow-x: edge scrollbar fix... all are required! (this code was also in html, put it back if it breaks without it) */
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 a {
     letter-spacing: normal;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
-}
-
-body {
-    margin: 0 auto;
-    background-color: #cdcdcd;
-    font-family: 'Open Sans', sans-serif;
 }
 
 /* changes highlight color, WebKit/Blink Browsers, Gecko Browsers */
@@ -35,9 +50,9 @@ body {
 /*  WideWrapper CSS - Wraps "Main" */
 .widewrapper {    
     display: flex;
-    flex-direction: column;     /* flex and direction or it fxs up */
+    flex-direction: column;     /* display flex and flex-dir requied or code breaks */
     min-height: 100vh;          /* stretch body to bottom before footer */
-    max-width: 1300px;          /* scales hero image, also offsets navbar! keep in mind if you change this value to update others! */
+    max-width: 1300px;          /* scales hero image & also offsets navbar! keep in mind if you change this value to update others! */
     background-color: #998FCA;
     margin: 0 auto;
     padding: 0px 5px 0px 5px;   /* extra "trim" on the sides wrapping main*/
@@ -70,8 +85,7 @@ body {
     position: absolute;
     text-align: center;
     background: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 12px 8px rgba(0,0,0,0.4); /* blur box soft edges match bg color */
-    border-radius: 4px;
+    border-radius: 16px;
     color: #ffffff;
     top: 50%;
     left: 50%;
@@ -153,7 +167,7 @@ body {
 
 /* widemain CSS - inner container of widerwapper & used on one-off pages and homepage */
 .widemain {
-    font-size: 18px;
+    font-size: 16px;
     margin: 5px 5px 10px 5px;       /* for some reason bottom needs double PX before footer (TRBL) */
     background-color: #f5f5f5;
     flex: 1;                        /* stretches the container to the footer */
@@ -234,9 +248,7 @@ body {
     }
     
     .wmaintxt p {
-    padding: 10px;  
-    line-height: 130%;
-    color: #000000;
+
     }
 }
 
@@ -387,12 +399,12 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 /* the 3 div grid in the footer left mid right */
 .footgrid {
-  display: grid;
-  word-wrap: break-word;
-  grid-gap: 5px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "footleft footmid footrt";
+    display: grid;
+    word-wrap: break-word;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "footleft footmid footrt";
 }
 
 .footleft { 
@@ -495,12 +507,12 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 /* Meet the Team Grid */
 .teamgrid {
-  display: grid;
-  grid-gap: 0px;
-  word-wrap: break-word;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "picleft picright";
+    display: grid;
+    grid-gap: 0px;
+    word-wrap: break-word;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "picleft picright";
 }
 
 .picleft { 
@@ -529,17 +541,17 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 /* Meet the Team photos CSS */
 .pfpcont {
-   padding-top: 24px;
-   text-align: center;
-   margin: 0 auto;
-   padding-bottom: 18px;
+    padding-top: 24px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 18px;
 }
 
 .pfpcont img {
-  border-radius: 50%;
-  max-width: 35%;
-  border: 8px solid #7265b5;
-  box-shadow:0 0 0 8px hsl(0, 0%, 65%),  0 0 0 16px hsl(0, 0%, 85%);
+    border-radius: 50%;
+    max-width: 35%;
+    border: 8px solid #7265b5;
+    box-shadow:0 0 0 8px hsl(0, 0%, 65%),  0 0 0 16px hsl(0, 0%, 85%);
 }
 
 .pfpspan {
@@ -564,11 +576,11 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 
 .footmap a {
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 10px 0px 10px 0px;
-  text-decoration: underline;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    text-decoration: underline;
 }
 
 .footmap a:hover {
@@ -578,12 +590,12 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 /* spanned "labels" within the footer */
 .footspan {
-  display: block;
-  color: #7265b5;
-  text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  margin: 5px 0px 0px 0px;
+    display: block;
+    color: #7265b5;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
 }
 
 .endcopyrt {
@@ -599,10 +611,10 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 /* standalone page grid (2fr left txt & 1fr right for imgs) */
 .standgrid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: "standleft standright";
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "standleft standright";
 }
 
 .standleft { 
@@ -711,4 +723,16 @@ https://www.w3schools.com/howto/howto_css_image_text.asp (also have TL TR BL BR)
 
 On the one two three four divs, bottom rounding only:
 border-radius: 0px 0px 10px 10px;
+
+
+debug css ghost elements (that dumb edge bar)
+https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side-of-page-when-background-image-should-extend
+
+* {
+  background: #000 !important;
+  color: #0f0 !important;
+  outline: solid #f00 1px !important;
+}
+
+
 */

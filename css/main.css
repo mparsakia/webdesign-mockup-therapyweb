@@ -10,11 +10,11 @@
 */
 
 html {
-    background-color: #cdcdcd;
+    background-color: #302E28;
 }
 
 body {
-    background-color: #cdcdcd;
+    background-color: #302E28;
     font-family: 'Open Sans', sans-serif;
     
 /* width, height, margin, padding, overflow-x: edge scrollbar fix... all are required! (this code was also in html, put it back if it breaks without it) */
@@ -53,8 +53,8 @@ a {
     flex-direction: column;     /* display flex and flex-dir requied or code breaks */
     min-height: 100vh;          /* stretch body to bottom before footer */
     max-width: 1300px;          /* scales hero image & also offsets navbar! keep in mind if you change this value to update others! */
-    background-color: #998FCA;
     margin: 0 auto;
+    background-color:  #565348;
     padding: 0px 5px 0px 5px;   /* extra "trim" on the sides wrapping main*/
 }
 
@@ -191,7 +191,7 @@ a {
     border-radius: 0px;
     text-align: center;
     margin: 0 auto;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .mainlabel h2 {
@@ -201,7 +201,7 @@ a {
     border-radius: 0px;
     text-align: center;
     margin: 0 auto;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 /* span labels for the standalone pages */
@@ -212,7 +212,7 @@ a {
     border-radius: 0px;
     text-align: center;
     margin: 0 auto;
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .altlabel h2 {
@@ -222,7 +222,7 @@ a {
     border-radius: 0px;
     text-align: center;
     margin: 0 auto;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 
@@ -281,12 +281,12 @@ a {
     font-size: 20px;   
     font-weight: bold;
     color: #ffffff;
-    line-height: 75px;      /* line-height of the logo's tall value */
+    line-height: 60px;      /* line-height clamped in .navlogo - max-height of image below must match here */
 }
 
 .navlogo {
     float:right;
-    max-height: 75px;       /* most likely not neccesary if logo is == 150x75 */
+    max-height: 60px;       /* most likely not neccesary if logo is == 150x75 */
 }
 
 
@@ -440,7 +440,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 .label {
     display: block;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     color: #ffffff;
     font-size: 26px;
     padding: 5px;
@@ -449,10 +449,8 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 /* 2 x 2 Grid on Homepage for Content */
 .maingrid {
     display: grid;
-    
-    padding: 5px 0px;
+    padding: 5px;
     grid-gap: 5px;
-    
     word-wrap: break-word;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -462,15 +460,15 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 .one {
     grid-area: one;
-    background-color: #c16464;
+    background-color: #c68c6e;
     text-align: center;
     font-size: 18px;
-    color: #000000;    
+    color: #000000;
 }
 
 .two {
     grid-area: two;
-    background-color: #54a37f;
+    background-color: #9aa768;
     text-align: center;
     font-size: 18px;
     color: #000000;
@@ -478,7 +476,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 .three {
     grid-area: three;
-    background-color: #627cad;
+    background-color: #7db0c3;
     text-align: center;
     font-size: 18px;
     color: #000000;
@@ -486,7 +484,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 
 .four {
     grid-area: four;
-    background-color: #f2c282;
+    background-color: #e8c472;
     text-align: center;
     font-size: 18px;
     color: #000000;
@@ -518,13 +516,13 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
 .picleft { 
     grid-area: picleft;
     text-align: center;
-    background-color: #fad8aa;
+    background-color: #dec6a8;
 }
 
 .picright { 
     grid-area: picright;   
     text-align: center;
-    background-color: #fad8aa;
+    background-color: rgb(222, 198, 168);
 
 }
 
@@ -551,7 +549,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one
     border-radius: 50%;
     max-width: 35%;
     border: 8px solid #7265b5;
-    box-shadow:0 0 0 8px hsl(0, 0%, 65%),  0 0 0 16px hsl(0, 0%, 85%);
+    box-shadow: 0 0 0 8px rgb(199, 168, 130), 0 0 0 16px rgb(207, 179, 144);
 }
 
 .pfpspan {

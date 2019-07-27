@@ -325,6 +325,20 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one 
     .topnav a:not(:first-child) {
         display: none;
   }
+    
+    /*
+    
+    For each page, that isn't the homepage, we will need to use nth-child to do the mobile rules.
+    This means that each page in the navbar needs to be relinked to a different css file.
+    If we do not, it will alway say "TherapyWeb Home" in the top left navbar on mobile.
+    Perhaps, we could additionally cut down on load times, by only importing the css rules affecting the page requested.
+    Keep this in mind when you are coding the html files.
+    
+        .topnav a:not(:nth-child(2)) {
+        display: none;
+        }
+    
+    */
 
     .topnav a.icon {
         float: right;

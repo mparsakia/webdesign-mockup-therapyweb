@@ -7,8 +7,7 @@
       background: #000 !important;
       color: #0f0 !important;
       outline: solid #f00 1px !important;
-    }
-*/
+    }*/
 
 
 html {
@@ -54,9 +53,11 @@ a {
     padding: 0px 5px 0px 5px;   /* extra "trim" on the sides wrapping main*/
 }
 
+/*
 .widewrapper a, a:hover{
     text-decoration: none;
 }
+*/
 
 .widewrapper b {
     font-weight: bold;
@@ -422,7 +423,7 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one 
 /* labels on the main grid (the shaded area, ie: "trainings")*/
 .label {
     display: block;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.65);
     color: #ffffff;
     font-size: 24px;
     padding: 5px;
@@ -484,7 +485,11 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one 
 /* Meet the Team Grid */
 .teamgrid {
     display: grid;
-    grid-gap: 0px;
+    
+    /* grid gap and bgcolor is the "line" separating the two*/
+    grid-gap: 5px;
+    background-color: #bcb9aa;
+    
     word-wrap: break-word;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -531,13 +536,13 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one 
 }
 
 .pfpspan {
+    display: block;
+    margin: 0 auto;
     padding: 10px 15px;
     font-size: 24px;
     color: #ffffff;
     background-color: #7265b5;
     border-radius: 50px;
-    display: block;
-    margin: 0 auto;
     width: 55%;
     font-weight: bold;
 }
@@ -597,16 +602,26 @@ this navbar size is smaller than full-size but not the sandwich-iphone menu one 
     grid-area: standleft;
 }
 
+.standleft p {
+    
+}
+
 .standright { 
     grid-area: standright;
-    padding: 30px 15px 0px 15px;
+    padding: 20px 10px 10px 10px;
+}
+
+.standright p {
+    
 }
 
 .standright img {
+    display: block;
+    margin: 0 auto;
     max-width: 100%;
-    box-shadow: 0 0 10px 6px rgba(0,0,0,0.5);
-    margin: 5px 0px;
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.4) ;
 }
+
 
 
 /* standalone grid mobile rearranged */
@@ -711,4 +726,6 @@ https://stackoverflow.com/questions/4617872/white-space-showing-up-on-right-side
 }
 
 
+autoprefixer, maybe we run our css through it before upload? could increase browser support.... 
+https://autoprefixer.github.io/?source=post_page---------------------------
 */

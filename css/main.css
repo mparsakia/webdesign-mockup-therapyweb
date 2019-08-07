@@ -32,13 +32,13 @@ a {
     text-decoration: none;
 }
 
-/* changes highlight color, WebKit/Blink Browsers, Gecko Browsers */
+/* changes highlight color, WebKit/Blink Browsers, Gecko Browsers  #f5c686 */
 ::selection {
-  background: #f5c686; 
+  background: #f08f8f; 
 }
 
 ::-moz-selection {
-  background: #f5c686; 
+  background: #f08f8f; 
 }
 
 
@@ -67,7 +67,7 @@ a {
 .herocontainer {
     position: relative;
     margin: 10px 5px 5px 5px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../photos/hero.jpg'); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .9)), url('../photos/hero.jpg'); 
     background-size: auto 100%;
     background-position: center; 
     background-repeat: no-repeat;
